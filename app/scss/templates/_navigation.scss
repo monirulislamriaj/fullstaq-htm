@@ -1,0 +1,148 @@
+.navigation {
+  transition: .3s ease;
+  @include desktop {
+    background: $secondary-color;
+  }
+}
+
+.navbar {
+  transition: .3s ease;
+  &-collapse{
+    @include desktop {
+      padding-bottom: 20px;
+    }
+  }
+  &-brand{
+    .dark{
+      display: none;
+    }
+  }
+}
+
+.nav-bg {
+  background-color: $white;
+  border-bottom: 1px solid #f1f1f1;
+  .navbar-dark .navbar-nav .nav-link{
+    color: $black;
+    &:hover{
+      color: $black;
+    }
+  }
+  .navbar {
+    &-brand{
+      .dark{
+        display: block;
+      }
+      .white{
+        display: none;
+      }
+    }
+  }
+  .nav-item{
+    &::before{
+      background: $secondary-color;
+    }
+  }
+}
+
+.navbar{
+  padding: 10px 0;
+  
+  .dropdown {
+    &:hover {
+      .dropdown-menu {
+        visibility: visible;
+        opacity: 1;
+        transform: scaleX(1);
+      }
+    }
+
+    &-menu {
+      box-shadow: 0px 3px 9px 0px rgba(0, 0, 0, 0.12);
+      padding: 15px;
+      border: 0;
+      top: 60px;
+      left: -25px;
+      border-radius: 0;
+      display: block;
+      visibility: hidden;
+      transition: .3s ease;
+      opacity: 0;
+      transform: scale(.95);
+      background: $text-color;
+
+      @include desktop {
+        display: none;
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+        transform-origin: unset;
+      }
+
+      &.show {
+        visibility: hidden;
+
+        @include desktop {
+          visibility: visible;
+          display: block;
+        }
+      }
+    }
+
+    &-item {
+      position: relative;
+      color: $secondary-color;
+      transition: .2s ease;
+      padding: 10px;
+
+      @include desktop {
+        text-align: center;
+      }
+
+      &:hover {
+        color: $white;
+        background: $black;
+      }
+    }
+  }
+}
+
+.nav-item{
+  margin: 0;
+  position: relative;
+  &::before{
+    position: absolute;
+    content: "";
+    left: 10%;
+    bottom: 15px;
+    height: 2px;
+    width: 0px;
+    transition: .2s ease;
+    background: $primary-color;
+    @include desktop {
+      display: none;
+    }
+  }
+  &.active,&:hover{
+    &::before{
+      width: 80%;
+    }
+  }
+
+  .nav-link{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 15px;
+  }
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: $white;
+  &:hover{
+    color: $white;
+  }
+}
+
+.navbar-expand-md .navbar-nav .nav-link {
+  padding: 20px 15px;
+}

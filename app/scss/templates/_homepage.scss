@@ -1,0 +1,59 @@
+.hero-section {
+  padding: 180px 0 100px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  h1 {
+    font-size:40px;
+  }
+  @include mobile {
+    background-position: 80% top;
+  }
+}
+
+.about-team {
+  padding:180px 0;
+  .about-ticker {
+    position: absolute;
+    top:0;
+    bottom: auto;
+    -webkit-transform: scale(-1);
+    -moz-transform: scale(-1);
+    -ms-transform: scale(-1);
+    -o-transform: scale(-1);
+    transform: scale(-1);
+        height: 812px;
+  }
+}
+
+.clients-logo{
+  img{
+    height: 60px;
+    width: auto;
+  }
+}
+
+.form-control {
+  height: 40px;
+  border-radius: 0;
+  border: 1px solid $border-color;
+
+  &:focus {
+    box-shadow: none;
+    border-color: $primary-color;
+  }
+}
+
+textarea.form-control{
+  height: 60px;
+}
+
+.hover-bg-dark{
+  transition: .2s ease;
+  &:hover{
+    background: #484848;
+    *{
+      color: $white;
+    }
+  }
+}

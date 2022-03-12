@@ -1,0 +1,88 @@
+/* about page */
+.paragraph-border {
+  padding: 40px 0;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+    content: "";
+    height: 2px;
+    width: 25px;
+    background: $text-color;
+  }
+
+  &::after {
+    position: absolute;
+    left: 50%;
+    top: 49%;
+    transform: translate(-50%, -50%);
+    content: "";
+    height: 2px;
+    width: 15px;
+    background: $text-color;
+  }
+}
+
+/* careers page */
+.team-item {
+  padding: 45px 50px 45px 100px;
+  @include tablet {
+    padding: 40px 20px;
+  }
+
+  h6 {
+    font-size: 15px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+}
+
+/* emergency page */
+
+.block {
+  h3 {
+    font-size: 30px;
+  }
+
+  &:not(:last-child) {
+    border-right: 1px solid $border-color;
+    @include tablet {
+      border: 0;
+    }
+  }
+}
+
+.play-icon {
+  color: $primary-color;
+  display: inline-block;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  margin: auto;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: 5px solid $primary-color;
+  line-height: 90px;
+  font-size: 50px;
+  transition: .2s ease;
+
+  &:hover {
+    color: $text-color;
+    border-color: $text-color;
+  }
+}
+
+.logo-border-right {
+  &:not(:last-child) {
+    border-right: 1px solid $border-color;
+    @include tablet {
+      border: 0;
+    }
+  }
+}
